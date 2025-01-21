@@ -1,0 +1,32 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", type="text/css", href="./static/style.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css")
+        title Home
+    body 
+        header 
+            #navigation-menu 
+                nav.main-nav 
+                    .nav-left 
+                        a(href="/")
+                            img(src=mainHeader.logo, alt=mainHeader.alt).nav-logo
+                        a(href="/")
+                            span.brand-name= mainHeader.brandName
+                    .nav-right
+                        ul.menu-links
+                            each link in hamburgerMenu.menuLinks 
+                                li
+                                    a(href="")= link.text
+                        button.hamburger-btn
+                            i(class="fas fa-bars")
+                .menu-overlay(style="display: none;")
+                    button.close-btn
+                        i(class="fas fa-times")
+                    ul.menu-links
+                        each link in hamburgerMenu.menuLinks 
+                            li
+                                a(href="")= link.text
+                .overlay-blur
+        block content
