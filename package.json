@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "sass:watch": "sass --watch ./static/style.scss ./static/style.css",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "node index.js"
   },
   "husky": {
     "hooks": {
@@ -36,6 +37,8 @@
   },
   "dependencies": {
     "eslist": "^1.0.0-beta.1",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2",
+    "pug": "^3.0.3"
   }
 }

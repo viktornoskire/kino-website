@@ -11,22 +11,39 @@ html(lang="en")
                 nav.main-nav 
                     .nav-left 
                         a(href="/")
-                            img(src=mainHeader.logo, alt=mainHeader.alt).nav-logo
+                            img(src=header.mainHeader.logo, alt=header.mainHeader.alt).nav-logo
                         a(href="/")
-                            span.brand-name= mainHeader.brandName
+                            span.brand-name= header.mainHeader.brandName
                     .nav-right
                         ul.menu-links
-                            each link in hamburgerMenu.menuLinks 
+                            each link in header.hamburgerMenu.menuLinks 
                                 li
-                                    a(href="")= link.text
+                                    a(href=link.link)= link.text
                         button.hamburger-btn
                             i(class="fas fa-bars")
-                .menu-overlay(style="display: none;")
-                    button.close-btn
-                        i(class="fas fa-times")
-                    ul.menu-links
-                        each link in hamburgerMenu.menuLinks 
-                            li
-                                a(href="")= link.text
                 .overlay-blur
         block content
+        footer.footer-container
+            .sections-container
+                - const contact = footer.sections[0]
+                .footer-section
+                    h4= contact.title
+                    ul 
+                        li E-post: #{contact.contact.mail}
+                        li Telefonnummer #{contact.contact.phoneNumber}
+                - const social = footer.sections[1]
+                .footer-section
+                    h4= social.title
+                    ul 
+                        each link in social.links
+                            li
+                                img(src=link.icon, alt=link.name).footer-icon
+                                a(href=link.url).footer-a= link.name
+                - const adress = footer.sections[2]
+                .footer-section
+                    h4= adress.title
+                    ul
+                        li= adress.adress.street
+                        li= adress.adress.town
+                        li
+                            a(href=adress.adress.url).footer-afind= adress.adress.findUs
