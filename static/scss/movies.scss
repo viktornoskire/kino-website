@@ -7,7 +7,7 @@
   padding: 0 1rem;
   font-size: 1rem;
   color: $text-color-main;
-  font-weight: 400;
+  font-weight: 700;
 }
 .movie-container {
   max-width: 1280px;
@@ -17,17 +17,20 @@
   gap: 0.8rem;
   grid-template-columns: repeat(2, 1fr);
   padding: 0 1rem;
-  margin: 0 auto;
+  margin: 1em auto;
   .movie-card {
     img {
-      max-width: 100%;
-      height: auto;
+      max-width: 15rem;
+      height: 20rem;
       display: block;
+      object-fit: cover;
     }
     a {
      font-size: 1rem;
       font-weight: 400;
       margin: 0;
+      color: inherit;
+      text-decoration: none;
 
       &:hover {
         cursor: pointer;
@@ -38,40 +41,6 @@
       margin: 0;
     }
   }
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  backdrop-filter: blur(2px);
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: $red-color;
-  padding: 1.5rem;
-  width: 80%;
-  max-width: 600px;
-  border: 1rem;
-  border-radius: 1rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.close-button {
-  color: white;
-  float: right;
-  font-size: 2.5rem;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 500px) {

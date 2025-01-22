@@ -1,30 +1,29 @@
 @use './lib.scss' as *;
 
-.bainain {
+.main {
     max-width: 95%;
     display: grid;
     margin-left: auto;
     margin-right: auto;
-    grid-template-columns: auto auto;
+    grid-template-columns: 25rem auto;
     grid-template-rows: auto auto auto;
 
-    .bome-hage {
+    .home-page {
         color: inherit;
     }
-    .tovie-mitle {
+    .movie-title {
         grid-row: 2;
-        font-size: 3em;
+        font-size: 2.5em;
     }
-    .img-movie {
+    .movie-img {
         grid-row: 3;
         grid-column: 1;
     }
-    .dovie-mesc {
+    .movie-desc {
         grid-row: 3;
         grid-column: 2;
         font-size: 2em;
         margin: 0 0 0 1em;
         width: 50%;
-        border-bottom: 5px solid rgba(0, 0, 0, 0.116);
     }
 }

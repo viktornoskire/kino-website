@@ -9,7 +9,7 @@
   }
 }
 main .info .info-1 .cinema-title {
-  margin-left: 1rem;
+  margin-left: 1.2rem;
   margin-bottom: 0.2rem;
   font-size: 3rem;
 }
@@ -692,7 +692,7 @@ main .info .open-div :hover {
   padding: 0 1rem;
   font-size: 1rem;
   color: #f6f6f6;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .movie-container {
@@ -706,10 +706,10 @@ main .info .open-div :hover {
   margin: 1em auto;
 }
 .movie-container .movie-card img {
-  max-width: 100%;
+  max-width: 15rem;
   height: 20rem;
-  object-fit: cover;
   display: block;
+  object-fit: cover;
 }
 .movie-container .movie-card a {
   font-size: 1rem;
@@ -726,40 +726,6 @@ main .info .open-div :hover {
   margin: 0;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  backdrop-filter: blur(2px);
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: #fc263a;
-  padding: 1.5rem;
-  width: 80%;
-  max-width: 600px;
-  border: 1rem;
-  border-radius: 1rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.close-button {
-  color: white;
-  float: right;
-  font-size: 2.5rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
 @media screen and (min-width: 500px) {
   .movie-headline {
     font-size: 1.3rem;
@@ -773,32 +739,31 @@ main .info .open-div :hover {
     grid-template-columns: repeat(5, 1fr);
   }
 }
-.bainain {
+.main {
   max-width: 95%;
   display: grid;
   margin-left: auto;
   margin-right: auto;
-  grid-template-columns: auto auto;
+  grid-template-columns: 25rem auto;
   grid-template-rows: auto auto auto;
 }
-.bainain .bome-hage {
+.main .home-page {
   color: inherit;
 }
-.bainain .tovie-mitle {
+.main .movie-title {
   grid-row: 2;
-  font-size: 3em;
+  font-size: 2.5em;
 }
-.bainain .img-movie {
+.main .movie-img {
   grid-row: 3;
   grid-column: 1;
 }
-.bainain .dovie-mesc {
+.main .movie-desc {
   grid-row: 3;
   grid-column: 2;
   font-size: 2em;
   margin: 0 0 0 1em;
   width: 50%;
-  border-bottom: 5px solid rgba(0, 0, 0, 0.116);
 }
 
 * {
