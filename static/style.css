@@ -703,19 +703,22 @@ main .info .open-div :hover {
   gap: 0.8rem;
   grid-template-columns: repeat(2, 1fr);
   padding: 0 1rem;
-  margin: 0 auto;
+  margin: 1em auto;
 }
 .movie-container .movie-card img {
   max-width: 100%;
-  height: auto;
+  height: 20rem;
+  object-fit: cover;
   display: block;
 }
-.movie-container .movie-card h2 {
+.movie-container .movie-card a {
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
+  color: inherit;
+  text-decoration: none;
 }
-.movie-container .movie-card h2:hover {
+.movie-container .movie-card a:hover {
   cursor: pointer;
 }
 .movie-container .movie-card p {
@@ -770,6 +773,34 @@ main .info .open-div :hover {
     grid-template-columns: repeat(5, 1fr);
   }
 }
+.bainain {
+  max-width: 95%;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+}
+.bainain .bome-hage {
+  color: inherit;
+}
+.bainain .tovie-mitle {
+  grid-row: 2;
+  font-size: 3em;
+}
+.bainain .img-movie {
+  grid-row: 3;
+  grid-column: 1;
+}
+.bainain .dovie-mesc {
+  grid-row: 3;
+  grid-column: 2;
+  font-size: 2em;
+  margin: 0 0 0 1em;
+  width: 50%;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.116);
+}
+
 * {
   font-family: "Poppins", sans-serif;
   max-width: 100%;

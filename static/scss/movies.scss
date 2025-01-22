@@ -24,14 +24,14 @@
       height: auto;
       display: block;
     }
-    h2 {
-      font-size: 1rem;
+    a {
+     font-size: 1rem;
       font-weight: 400;
       margin: 0;
 
       &:hover {
         cursor: pointer;
-      }
+      } 
     }
     p {
       font-size: 0.8rem;

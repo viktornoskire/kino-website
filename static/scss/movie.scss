@@ -1,0 +1,30 @@
+@use './lib.scss' as *;
+
+.bainain {
+    max-width: 95%;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+
+    .bome-hage {
+        color: inherit;
+    }
+    .tovie-mitle {
+        grid-row: 2;
+        font-size: 3em;
+    }
+    .img-movie {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    .dovie-mesc {
+        grid-row: 3;
+        grid-column: 2;
+        font-size: 2em;
+        margin: 0 0 0 1em;
+        width: 50%;
+        border-bottom: 5px solid rgba(0, 0, 0, 0.116);
+    }
+}
