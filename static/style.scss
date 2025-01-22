@@ -1,11 +1,11 @@
-@use '../src/scss/lib.scss' as *;
-@use '../src/scss/index.scss';
-@use '../src/scss/kids.scss';
-@use '../src/scss/about.scss';
-@use '../src/scss/header.scss';
-@use '../src/scss/infoModal.scss';
-@use '../src/scss/footer.scss';
-@use '../src/scss/movies.scss';
+@use './scss/lib.scss' as *;
+@use './scss/index.scss';
+@use './scss/kids.scss';
+@use './scss/about.scss';
+@use './scss/header.scss';
+@use './scss/infoModal.scss';
+@use './scss/footer.scss';
+@use './scss/movies.scss';
 
 * {
   font-family: 'Poppins', sans-serif;
@@ -20,4 +20,16 @@ body {
   margin: 0;
   max-width: $screen-max;
   margin: auto;
+
+  .cinema-title, .cinema-open {
+    margin-left: 1.2rem;
+  }
+  .open-div {
+    margin-right: 1.2rem;
+  }
+  .kino-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

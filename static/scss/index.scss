@@ -1,9 +1,5 @@
 @use './lib.scss' as *;
 
-.test {
-  color: $red-color;
-}
-
 main {
   .info {
     @include breakpointMinWidth(1000px) {
@@ -12,12 +8,13 @@ main {
       grid-template-rows: auto auto auto;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 3rem;
+      margin-top: 1rem;
     }
     .info-1 {
       .cinema-title {
-        margin-left: 1.2rem;
+        margin-left: 1rem;
         margin-bottom: 0.2rem;
+        font-size: 3rem;
       }
       .cinema-title:hover {
         cursor: default;
