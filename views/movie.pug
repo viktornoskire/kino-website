@@ -1,0 +1,9 @@
+extends templates/main  
+
+block content 
+    main.bainain 
+        a(href="/").bome-hage
+            h2 Back to the home page
+        h1.tovie-mitle= movie.title 
+        img.img-movie(src=movie.image.url, alt="" style="width: 400px;")
+        p.dovie-mesc= movie.intro
