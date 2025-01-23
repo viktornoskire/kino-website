@@ -24,7 +24,7 @@ block content
                         li.modal-item-1 
                             img(class="modal-open" src="./img/QnAOpen.png" alt="Plus icon with circle around")
                             p.modal-question Tillgänglighet 
-                            p.modal-answer. 
+                            p.modal-answer(style="display: none;"). 
                                 Kino Sandviken är tillgänglig för alla! Våra lokaler har 
                                 rullstolsanpassade ingångar, ramper och sittplatser i varje salong.
                                 För gäster med nedsatt hörsel erbjuder vi hörslingor och 
@@ -34,7 +34,7 @@ block content
                         li.modal-item-2
                             img(class="modal-open" src="./img/QnAOpen.png" alt="Plus icon with circle around")
                             p.modal-question Öppettider 
-                            .modal-answer Biografen stränger 15 minuter efter föreställningen
+                            .modal-answer(style="display: none;") Biografen stränger 15 minuter efter föreställningen
                                 each date in data.open 
                                     .open-times
                                         p.open-times-day= date.dag
