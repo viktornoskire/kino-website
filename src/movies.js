@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 
 const apiBase = 'https://plankton-app-xhkom.ondigitalocean.app/api';
 
-function toMovieObject(api) {
+function easyObject(api) {
     return {
         id: api.id,
         ...api.attributes,
@@ -12,11 +12,11 @@ function toMovieObject(api) {
 export async function loadMovies() {
     const res = await fetch(apiBase + "/movies");
     const payload = await res.json();
-    return payload.data.map(toMovieObject);
+    return payload.data.map(easyObject);
 };
 
 export async function loadMovie(id) {
     const res = await fetch(apiBase + "/movies/" + id);
     const payload = await res.json();
-    return toMovieObject(payload.data);
+    return easyObject(payload.data);
 };
