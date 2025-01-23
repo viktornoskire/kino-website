@@ -5,7 +5,6 @@ import initialize from "./src/app.js";
 const myAPI = {
   loadMovie,
   loadMovies,
-  createData,
 }
 
 const app = initialize(myAPI)
