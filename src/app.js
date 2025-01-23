@@ -8,7 +8,7 @@ export default function initialize(api) {
   app.get('/', async (req, res) => {
     res.render('home', {
       data: createData(),
-      movies: api.loadMovies(),
+      movies: await api.loadMovies(),
     });
   });
 
@@ -16,7 +16,7 @@ export default function initialize(api) {
     const id = req.params.id;
     res.render('movie', {
       data: createData(),
-      movie: api.loadMovie(id),
+      movie: await api.loadMovie(id),
     });
   });
 
