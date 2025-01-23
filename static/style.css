@@ -744,7 +744,7 @@ main .info .open-div :hover {
   display: grid;
   margin-left: auto;
   margin-right: auto;
-  grid-template-columns: 25rem auto;
+  grid-template-columns: 25rem auto 25rem;
   grid-template-rows: auto auto auto;
 }
 .main .home-page {
@@ -757,6 +757,7 @@ main .info .open-div :hover {
 .main .movie-img {
   grid-row: 3;
   grid-column: 1;
+  border-radius: 25px;
 }
 .main .movie-desc {
   grid-row: 3;
@@ -764,6 +765,37 @@ main .info .open-div :hover {
   font-size: 2em;
   margin: 0 0 0 1em;
   width: 50%;
+}
+.main .book-btns {
+  grid-row: 2;
+  grid-column: 3;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main .book-btns .change-city {
+  background-color: #fc263a;
+  padding: 0.625rem 2.5rem;
+  border-radius: 1.5rem;
+  color: #f6f6f6;
+  font-weight: 700;
+  border-color: transparent;
+}
+.main .book-btns .view-tickets {
+  background-color: transparent;
+  padding: 0.625rem 2.5rem;
+  border-radius: 1.5rem;
+  color: #fc263a;
+  font-weight: 700;
+  border-color: #fc263a;
+  margin-left: 4em;
+}
+.main .accessibility {
+  grid-row: 3;
+  grid-column: 3;
+  padding: 2em;
+  background-color: #2d2d2d;
+  border-radius: 25px;
+  margin-bottom: 20rem;
 }
 
 * {
