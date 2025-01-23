@@ -774,20 +774,22 @@ main .info .open-div :hover {
 }
 .main .book-btns .change-city {
   background-color: #fc263a;
-  padding: 0.625rem 2.5rem;
-  border-radius: 1.5rem;
+  padding: 1rem 3rem;
+  border-radius: 1.8rem;
   color: #f6f6f6;
   font-weight: 700;
+  font-size: 1.1em;
   border-color: transparent;
 }
 .main .book-btns .view-tickets {
   background-color: transparent;
-  padding: 0.625rem 2.5rem;
-  border-radius: 1.5rem;
+  padding: 1rem 3rem;
+  border-radius: 1.8rem;
   color: #fc263a;
   font-weight: 700;
   border-color: #fc263a;
-  margin-left: 4em;
+  font-size: 1.1em;
+  margin-left: 1em;
 }
 .main .accessibility {
   grid-row: 3;
