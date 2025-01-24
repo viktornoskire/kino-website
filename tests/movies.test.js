@@ -1,31 +1,26 @@
 import { test, expect } from '@jest/globals';
 import request from 'supertest';
-
+import { loadMovies, loadMovie } from "../src/movies.js"
 import initialize from '../src/app.js';
 
+const api = {
+  loadMovie,
+  loadMovies,
+}
+
 test('Are the correct movies displayed?', async () => {
-  const app = initialize({
-    loadMovie: async () => {
-      return {
-        id: 1,
-        title: 'Encanto',
-      };
-    },
-    loadMovies: async () => {
-      return [
-        {
-          id: 1,
-          title: 'Encanto',
-        },
-        {},
-      ];
-    },
-  });
+  const app = initialize(api);
 
-  const res = await request(app)
-    .get("/")
-    .expect("Content-Type", /html/)
-    .expect(200)
+  const res = await request(app).get('/').expect('Content-Type', /html/);
+  expect(res.text).toContain('Encanto');
+  expect(res.text).toContain('Forrest Gump');
+  expect(res.text).toContain('Training Day');
+});
 
-    expect(response.text).toMatch("Encanto");
+test('Is the correct movies displayed?', async () => {
+  const app = initialize(api);
+
+  const res = await request(app).get('/movies/2').expect('Content-Type', /html/);
+  console.log(res);
+  expect(res.text).toContain('Encanto');
 });
