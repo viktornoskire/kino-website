@@ -9,7 +9,7 @@ function easyObject(api) {
   return {
     id: api.id,
     ...api.attributes,
-    markDown: md.render(api.attributes.intro || '')
+    intro: md.render(api.attributes.intro || '')
   };
 }
 
