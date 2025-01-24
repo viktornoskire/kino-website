@@ -5,6 +5,7 @@ export default function initialize(api) {
   const app = express();
   app.set('view engine', 'pug');
 
+
   app.get('/', async (req, res) => {
     res.render('home', {
       data: createData(),
@@ -14,9 +15,10 @@ export default function initialize(api) {
 
   app.get('/movies/:id', async (req, res) => {
     const id = req.params.id;
+    const movie = await api.loadMovie(id)
     res.render('movie', {
       data: createData(),
-      movie: await api.loadMovie(id),
+      movie: movie,
     });
   });
 

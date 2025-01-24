@@ -1,5 +1,4 @@
 import { loadMovie, loadMovies } from './src/movies.js';
-import createData from "./src/db.js";
 import initialize from "./src/app.js";
 
 const myAPI = {
