@@ -23,7 +23,7 @@ export async function loadMovie(id) {
   const res = await fetch(apiBase + '/movies/' + id);
   const payload = await res.json();
 
-  if(!payload) {
+  if(!payload.data) {
     throw new Error(`Movie with ${id} not found`);
   }
 
