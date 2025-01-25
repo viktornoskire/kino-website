@@ -7,19 +7,23 @@ export default function initialize(api) {
 
 
   app.get('/', async (req, res) => {
+    const movies = await api.loadMovies();
     res.render('home', {
       data: createData(),
-      movies: await api.loadMovies(),
+      movies: movies,
     });
   });
 
   app.get('/movies/:id', async (req, res) => {
     const id = req.params.id;
-    const movie = await api.loadMovie(id)
-    res.render('movie', {
+    try {
+      res.render('movie', {
       data: createData(),
-      movie: movie,
+      movie: await api.loadMovie(id),
     });
+    } catch (err) {
+      res.status(404).render("404", { data: createData(),})
+    }
   });
 
   app.get('/about', async (req, res) => {
