@@ -1,0 +1,14 @@
+@use "./lib.scss" as *;
+
+.error-msg {
+    margin: 10rem auto 15rem auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.back-to-home {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: inherit;
+}

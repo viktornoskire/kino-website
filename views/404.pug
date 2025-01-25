@@ -1,4 +1,6 @@
 extends templates/main
 
 block content 
-    h1 Not Found
+    h1.error-msg Not Found
+    a(href="/").back-to-home
+        p Back to home Page
