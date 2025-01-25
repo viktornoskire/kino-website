@@ -1,12 +1,11 @@
 {
-  "name": "kino_group_project",
+  "name": "kino-website-ssr",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "sass:watch": "sass --watch ./static/style.scss ./static/style.css",
-    "prepare": "husky install",
     "start": "node index.js",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "test-watch": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --watch"
