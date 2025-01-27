@@ -1,5 +1,5 @@
 // ____________________________________________________
-if (document.querySelector('.movie-headline')) {
+if (document.querySelector('.movie-headline') || document.querySelector('.about-page')) {
   const item0 = document.querySelector('.modal-item-0');
   const item1 = document.querySelector('.modal-item-1');
   const item2 = document.querySelector('.modal-item-2');
